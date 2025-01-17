@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
-import Link from 'next/link';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', message: '', receiverEmail: '' });
   const [status, setStatus] = useState('');
 
   const handleSubmit = async (e) => {
@@ -20,7 +19,7 @@ export default function Contact() {
 
       if (response.ok) {
         setStatus('Email sent successfully!');
-        setFormData({ name: '', email: '', message: '' }); // Reset form
+        setFormData({ name: '', email: '', message: '', receiverEmail: '' }); // Reset form
       } else {
         setStatus('Failed to send email. Please try again.');
       }
@@ -35,9 +34,6 @@ export default function Contact() {
       <Navbar />
       <section className="mt-28 px-6 py-12 max-w-2xl mx-auto bg-white shadow-lg rounded-lg">
         <h2 className="text-4xl text-gray-800 font-bold text-center mb-8">Contact Me</h2>
-        <p className="text-center text-gray-600 mb-8">
-          Feel free to reach out via the form below. I’ll get back to you as soon as possible!
-        </p>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label htmlFor="name" className="block text-gray-700 font-semibold">Name</label>
@@ -60,6 +56,18 @@ export default function Contact() {
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               className="w-full px-4 py-2 border border-gray-300 text-black rounded-md focus:outline-none focus:border-teal-500"
               placeholder="you@example.com"
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="receiverEmail" className="block text-gray-700 font-semibold">Recipient Email</label>
+            <input
+              type="email"
+              id="receiverEmail"
+              value={formData.receiverEmail}
+              onChange={(e) => setFormData({ ...formData, receiverEmail: e.target.value })}
+              className="w-full px-4 py-2 border border-gray-300 text-black rounded-md focus:outline-none focus:border-teal-500"
+              placeholder="Recipient Email"
               required
             />
           </div>

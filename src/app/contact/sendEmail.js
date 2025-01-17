@@ -2,11 +2,16 @@ import nodemailer from 'nodemailer';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const { name, email, message } = req.body;
+    const { name, email, message, receiverEmail } = req.body; // Extract receiverEmail from the request body
+
+    // Validate the receiverEmail to prevent abuse
+    if (!receiverEmail || !/\S+@\S+\.\S+/.test(receiverEmail)) {
+      return res.status(400).json({ message: 'Invalid receiver email address' });
+    }
 
     // Create a transporter using nodemailer
     const transporter = nodemailer.createTransport({
-      service: 'Gmail', // Or use another service like "hotmail" or custom SMTP
+      service: 'Gmail', // Use Gmail or other email provider
       auth: {
         user: process.env.EMAIL_USER, // Your email address
         pass: process.env.EMAIL_PASS, // Your email password or app password
@@ -16,8 +21,8 @@ export default async function handler(req, res) {
     try {
       // Send the email
       await transporter.sendMail({
-        from: email,
-        to: process.env.RECEIVER_EMAIL, // The recipient's email address
+        from: email, // Sender's email
+        to: receiverEmail, // Dynamic receiver email
         subject: `New Contact Form Submission from ${name}`,
         text: `Message: ${message}\n\nFrom: ${name} (${email})`,
       });

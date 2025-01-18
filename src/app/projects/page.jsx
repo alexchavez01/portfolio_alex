@@ -22,7 +22,7 @@ const ProjectSection = () => {
       {
         title: 'Website Portfolio',
         description: 'My own wehsite to showcase my skills, and projects',
-        technologies: ['React', 'HTML', 'TailWinsCSS', 'Web Development'],
+        technologies: ['React', 'HTML', 'TailWindCSS', 'Web Development'],
         githubLink: 'https://github.com/alexchavez01?tab=repositories',
       },
       {
@@ -38,11 +38,23 @@ const ProjectSection = () => {
         githubLink: 'https://github.com/alexchavez01?tab=repositories',
       },
       {
+        title: 'MealMate',
+        description: 'A protoype web app that generates meal plans using AI based on user preferences and dietary restrictions, and provides recipes and grocery lists for each meal.',
+        technologies: ['React, HTML, TailWindCSS, JavaScript'],
+        githubLink: 'https://github.com/alexchavez01?tab=repositories',
+      },
+      {
+        title: '',
+        description: '',
+        technologies: ['Github'],
+        githubLink: 'https://github.com/alexchavez01?tab=repositories',
+      },
+      {
         title: 'Other Projects',
         description: 'Other small projects that I have created and or created programs with group',
         technologies: ['Github'],
         githubLink: 'https://github.com/alexchavez01?tab=repositories',
-      },
+      }, 
       
     ];
   

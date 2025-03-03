@@ -6,10 +6,10 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { Github, Linkedin, Twitter, Mail, ChevronDown, ExternalLink } from "lucide-react"
 
-import Navbar from "./components/navbar"
-import ProjectCard from "./components/project-card"
-import SkillBadge from "./components/skill-badge"
-import ContactForm from "./components/contact-form"
+import Navbar from "../components/navbar"
+import ProjectCard from "../components/project-card"
+import SkillBadge from "../components/skill-badge"
+import ContactForm from "../components/contact-form"
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false)

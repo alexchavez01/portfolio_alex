@@ -36,26 +36,26 @@ export default function Home() {
 
   const projects = [
     {
-      title: "AI-Powered Task Manager",
-      description: "A task management application with AI features to prioritize and categorize tasks automatically.",
+      title: "MealMate",
+      description: "A meal planner, with recipe generator with AI features to generate recipe automatically based on users inputs.",
       image: "/placeholder.svg?height=300&width=500",
-      tags: ["React", "Node.js", "OpenAI", "MongoDB"],
-      github: "https://github.com/username/project1",
+      tags: ["React", "Javascript", "Pickaxe", "TailwindCSS"],
+      github: "https://github.com/alexchavez01/mealmate",
       demo: "https://project1.demo.com",
     },
     {
-      title: "Immersive 3D Portfolio",
-      description: "An interactive 3D portfolio website built with Three.js and React Three Fiber.",
+      title: "Immersive  Portfolio",
+      description: "An interactive  portfolio website built with Node.js and React.",
       image: "/placeholder.svg?height=300&width=500",
-      tags: ["Three.js", "React", "JavaScript", "GSAP"],
+      tags: ["Three.js", "React", "JavaScript", "TailWindCSS"],
       github: "https://github.com/username/project2",
       demo: "https://project2.demo.com",
     },
     {
-      title: "Real-time Collaboration Tool",
-      description: "A collaborative workspace with real-time updates, document sharing, and video conferencing.",
+      title: "Finace Dashboard",
+      description: "A personal dashbaord to track, and view insights about your finances.",
       image: "/placeholder.svg?height=300&width=500",
-      tags: ["Next.js", "Socket.io", "WebRTC", "Prisma"],
+      tags: ["Node.js", "Express", "TailwindCSS", "MongoDB", "JWT", "Chart.js"],
       github: "https://github.com/username/project3",
       demo: "https://project3.demo.com",
     },
@@ -159,7 +159,7 @@ export default function Home() {
             >
               <Twitter size={20} />
             </Link>
-            <Link href="mailto:alex@example.com" className="social-icon-link">
+            <Link href="mailto:chavezalex285@gmail.com" className="social-icon-link">
               <Mail size={20} />
             </Link>
           </motion.div>
@@ -357,7 +357,7 @@ export default function Home() {
             >
               <Twitter size={20} />
             </Link>
-            <Link href="mailto:alex@example.com" className="social-icon-link">
+            <Link href="mailto:chavezalex285@gmail.com" className="social-icon-link">
               <Mail size={20} />
             </Link>
           </div>

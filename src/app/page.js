@@ -11,6 +11,8 @@ import ProjectCard from "./components/project-card"
 import SkillBadge from "./components/skill-badge"
 import ContactForm from "./components/contact-form"
 
+import myImage from "/public/images/ghibli.png"
+
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false)
 
@@ -175,7 +177,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-r from-primary to-purple-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
             <div className="relative overflow-hidden rounded-3xl border-4 border-white dark:border-gray-800 shadow-2xl">
               <Image
-                src="/images/ghibli.png"
+                src={myImage}
                 alt="Alex Chavez"
                 width={500}
                 height={500}

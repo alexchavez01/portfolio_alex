@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "homepage": "https://alexchavez01.io/portfolio_alex"
   },
   "dependencies": {
     "framer-motion": "^12.4.9",

@@ -180,7 +180,6 @@ export default function Home() {
                 width={500}
                 height={500}
                 className="object-cover w-full h-full"
-                priority
               />
             </div>
           </div>

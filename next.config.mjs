@@ -1,12 +1,4 @@
-// next.config.mjs
+/** @type {import('next').NextConfig} */
+const nextConfig = {};
 
-const nextConfig = {
-    output: 'export',
-    basePath: '/portfolio_alex', // ✅ your GitHub repo name
-    images: {
-      unoptimized: true,
-    },
-  };
-  
-  export default nextConfig;
-  
+export default nextConfig;

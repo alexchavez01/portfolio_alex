@@ -1,11 +1,12 @@
-/** @type {import('next').NextConfig} */
+// next.config.mjs
+
 const nextConfig = {
-    output: 'export', // ensures it's fully static
-    basePath: '/portfolio_alex', // important for GitHub Pages
+    output: 'export',
+    basePath: '/portfolio_alex', // ✅ your GitHub repo name
     images: {
-      unoptimized: true, // disables next/image optimization (required for static exports)
+      unoptimized: true,
     },
   };
   
-  module.exports = nextConfig;
+  export default nextConfig;
   
